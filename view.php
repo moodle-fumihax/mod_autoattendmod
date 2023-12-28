@@ -1,4 +1,4 @@
-﻿<?php  
+<?php  
 
 // $Id: view.php,v 1.2 2006/02/01 12:00:47 dlnsk Exp $
 

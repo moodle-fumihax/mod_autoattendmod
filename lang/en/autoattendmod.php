@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $string['autoattendmod:addinstance'] = 'Add a new auto attendance module';
 $string['autoattendmod:view'] = 'View module';
 $string['autoattendmod:viewreports'] = 'View reports';

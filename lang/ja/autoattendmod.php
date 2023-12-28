@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $string['autoattendmod:addinstance'] = '自動出欠モジュールを追加する';
 $string['autoattendmod:view'] = 'モジュールの閲覧';
 $string['autoattendmod:viewreports'] = 'レポートの閲覧';

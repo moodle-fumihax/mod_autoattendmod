@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 namespace mod_autoattendmod\output;
  
 defined('MOODLE_INTERNAL') || die();

@@ -1,4 +1,4 @@
-﻿<?php  //$Id: upgrade.php,v 1.1.2.2 2006/10/26 17:43:08 stronk7 Exp $
+<?php  //$Id: upgrade.php,v 1.1.2.2 2006/10/26 17:43:08 stronk7 Exp $
 
 // This file keeps track of upgrades to 
 // the autoattendmod module
