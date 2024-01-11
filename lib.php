@@ -83,6 +83,7 @@ function autoattendmod_add_instance($autoattendmod)
     if (!property_exists($autoattendmod, 'emailuser'))     $autoattendmod->emailuser     = 0;
     if (!property_exists($autoattendmod, 'summertime'))    $autoattendmod->summertime    = 0;
     if (!property_exists($autoattendmod, 'excelver'))      $autoattendmod->excelver      = 0;
+    if (!property_exists($autoattendmod, 'dispinfo'))      $autoattendmod->dispinfo      = 0; 
     if (!property_exists($autoattendmod, 'homeroom'))      $autoattendmod->homeroom      = 0;
     if (!property_exists($autoattendmod, 'localhostname')) $autoattendmod->localhostname = 0;
     if (!property_exists($autoattendmod, 'feedback'))      $autoattendmod->feedback      = 0;
@@ -118,6 +119,7 @@ function autoattendmod_update_instance($autoattendmod)
     if (!property_exists($autoattendmod, 'emailuser'))     $autoattendmod->emailuser     = 0;
     if (!property_exists($autoattendmod, 'summertime'))    $autoattendmod->summertime    = 0;
     if (!property_exists($autoattendmod, 'excelver'))      $autoattendmod->excelver      = 0;
+    if (!property_exists($autoattendmod, 'dispinfo'))      $autoattendmod->dispinfo      = 0; 
     if (!property_exists($autoattendmod, 'homeroom'))      $autoattendmod->homeroom      = 0;
     if (!property_exists($autoattendmod, 'localhostname')) $autoattendmod->localhostname = 0;
     if (!property_exists($autoattendmod, 'feedback'))      $autoattendmod->feedback      = 0;

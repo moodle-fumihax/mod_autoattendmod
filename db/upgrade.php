@@ -130,6 +130,21 @@ function xmldb_autoattendmod_upgrade($oldversion=0)
         }
     }
 
+    // 2024011102
+    if ($oldversion < 2024011102) {
+        $table = new xmldb_table('autoattendmod');
+        //
+        $field = new xmldb_field('dispinfo', XMLDB_TYPE_INTEGER, '2', null, XMLDB_NOTNULL, null, '1', 'localhostname');
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+        //
+        $field = new xmldb_field('predisptime', XMLDB_TYPE_INTEGER, '5', null, XMLDB_NOTNULL, null, '5', 'dispinfo');
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+    }
+
     return $result;
 }
 

@@ -13,9 +13,10 @@ $plugin->component = 'mod_autoattendmod';
 $plugin->cron      = 300;
 $plugin->maturity  = MATURITY_STABLE;
 
-$plugin->release   = '2.7.1';
+$plugin->release   = '2.7.2';
 
-$plugin->version   = 2024010500;    // icon
+$plugin->version   = 2024011102;    // disply session info in block
+//$plugin->version = 2024010500;    // icon
 //$plugin->version = 2023122800;    // Match to block version
 //$plugin->version = 2023112800;    // Match to block version
 //$plugin->version = 2023032300;    // Local hostname

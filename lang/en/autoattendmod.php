@@ -28,6 +28,14 @@ $string['modincorrect']   = 'Course module is incorrect<br />It is possible that
 $string['session_num'] = 'The number of sessions';
 
 $string['autoattendmod_options'] = 'Options of Auto Attendance module';
+
+$string['disp_info'] = 'Display information on the most soon or ongoing class in the block.';
+$string['disp_info_title'] = 'Attendance Information in the block';
+$string['disp_info_help'] = 'Display the key (case of semi-automatic) and number of attendees for the most soon or ongoing class in the block';
+$string['pre_disptime'] ='Display of the most soon class information';
+$string['pre_disptime_title'] ='Grace time before class start (m)';
+$string['pre_disptime_help'] ='If the block displays information on the most soon or ongoing class, specify how many minutes before the class starts.';
+
 $string['permit_homeroom_title'] = 'For Homeroom Module';
 $string['permit_homeroom'] = 'Permit access from Homeroom Module';
 $string['permit_homeroom_help'] = 'If you check off this, Homeroom module does not access this autoattend module/block';

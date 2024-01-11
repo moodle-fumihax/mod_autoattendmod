@@ -10,6 +10,10 @@ require_once(dirname(__FILE__).'/lib.php');
 /*
  function autoattendmod_get_course_module($courseid)
  function autoattendmod_get_namepattern($courseid)
+
+ function autoattendmod_get_disp_info($courseid)
+ function autoattendmod_get_predisp_time($courseid)
+
  function autoattendmod_disp_feedback($courseid)
  function autoattendmod_is_email_enable($courseid)
  function autoattendmod_is_email_allreports($courseid)
@@ -68,6 +72,39 @@ function  autoattendmod_get_namepattern($courseid)
     if (!$pattern) $pattern = 'fullname';
 
     return $pattern;
+}
+
+
+
+function  autoattendmod_get_disp_info($courseid)
+{
+    global $DB;
+
+    $ret = 1;
+    if ($courseid==0) return $ret;
+    $mod = autoattendmod_get_course_module($courseid);
+    if (!$mod) return $ret;
+  
+    $ret = $DB->get_field('autoattendmod', 'dispinfo', array('id'=>$mod->instance));
+    if (!$ret) $ret = 1;
+
+    return $ret;
+}
+
+
+function  autoattendmod_get_predisp_time($courseid)
+{
+    global $DB;
+
+    $ret = 5;
+    if ($courseid==0) return $ret;
+    $mod = autoattendmod_get_course_module($courseid);
+    if (!$mod) return $ret;
+  
+    $ret = $DB->get_field('autoattendmod', 'predisptime', array('id'=>$mod->instance));
+    if (!$ret) $ret = 5;
+
+    return $ret;
 }
 
 
