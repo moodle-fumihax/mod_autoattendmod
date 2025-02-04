@@ -15,7 +15,7 @@ $plugin->maturity  = MATURITY_STABLE;
 
 $plugin->release   = '2.7.4';
 
-$plugin->version   = 2025020302;    // Match to block version
+$plugin->version   = 2025020303;    // Match to block version
 //$plugin->version = 2024021101;    // repackage
 //$plugin->version = 2024011102;    // disply attendace info in the block
 //$plugin->version = 2024010500;    // icon
