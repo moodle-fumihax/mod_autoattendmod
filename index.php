@@ -5,8 +5,8 @@ require_once(dirname(__FILE__).'/locallib.php');
 
 $enable_block = false;
 if (file_exists('../../blocks/autoattend/locallib.php')) {
-	require_once('../../blocks/autoattend/locallib.php');
-	$enable_block = true;
+    require_once('../../blocks/autoattend/locallib.php');
+    $enable_block = true;
 }
 
 $id = required_param('id', PARAM_INT);
@@ -15,7 +15,7 @@ $url = new moodle_url('/mod/autoattendmod/index.php', array('id'=>$id));
 $PAGE->set_url($url);
 
 if (!$course = $DB->get_record('course', array('id'=>$id))) {
-	print_error('invalidcourseid');
+    jbxl_print_error('invalidcourseid');
 }
 $context = context_course::instance($course->id);
 
@@ -40,9 +40,9 @@ echo $OUTPUT->header();
 
 /// Get all the appropriate data
 if (! $autoattendmods = get_all_instances_in_course('autoattendmod', $course)) {
-	$url = new moodle_url('/course/view.php', array('id'=>$course->id));
-	notice(get_string('thereareno', 'moodle', $strautoattendmods), $url);
-	die;
+    $url = new moodle_url('/course/view.php', array('id'=>$course->id));
+    notice(get_string('thereareno', 'moodle', $strautoattendmods), $url);
+    die;
 }
 $usesections = course_format_uses_sections($course->format);
 
@@ -55,37 +55,37 @@ $strsessionnum  = get_string('session_num', 'autoattendmod');
 $table = new html_table();
 
 if ($usesections) {
-	$table->head  = array($strsectionname, $strname, $strsessionnum);
-	$table->align = array('center', 'left', 'center');
+    $table->head  = array($strsectionname, $strname, $strsessionnum);
+    $table->align = array('center', 'left', 'center');
 } 
 else {
-	$table->head  = array($strname, $strsessionnum);
-	$table->align = array('left', 'center');
+    $table->head  = array($strname, $strsessionnum);
+    $table->align = array('left', 'center');
 }
 
 
 //
 foreach ($autoattendmods as $autoattendmod) {
-	$viewurl = new moodle_url('/mod/autoattendmod/view.php', array('id'=>$autoattendmod->coursemodule));
+    $viewurl = new moodle_url('/mod/autoattendmod/view.php', array('id'=>$autoattendmod->coursemodule));
 
-	$dimmedclass = $autoattendmod->visible ? '' : 'class="dimmed"';
-	$link = '<a '.$dimmedclass.' href="'.$viewurl->out().'">'.$autoattendmod->name.'</a>';
+    $dimmedclass = $autoattendmod->visible ? '' : 'class="dimmed"';
+    $link = '<a '.$dimmedclass.' href="'.$viewurl->out().'">'.$autoattendmod->name.'</a>';
 
-	if ($usesections) {
-		$tabledata = array(get_section_name($course, $autoattendmod->section), $link);
-	}
-	else {
-		$tabledata = array($link);
-	}
+    if ($usesections) {
+        $tabledata = array(get_section_name($course, $autoattendmod->section), $link);
+    }
+    else {
+        $tabledata = array($link);
+    }
 
-	if ($enable_block) {
-		$tabledata[] = intval(autoattend_count_sessions($course->id, 0));
-	}
-	else {
-		$tabledata[] = ' - ';
-	}
+    if ($enable_block) {
+        $tabledata[] = intval(autoattend_count_sessions($course->id, 0));
+    }
+    else {
+        $tabledata[] = ' - ';
+    }
 
-	$table->data[] = $tabledata;
+    $table->data[] = $tabledata;
 }
 echo '<br />';
 
