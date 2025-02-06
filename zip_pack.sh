@@ -2,5 +2,5 @@
 
 rm -rf .git .gitignore 
 
-(cd ..; zip -r mod_autoattend.zip mod_autoattendmod/)
+(cd ..; zip -r mod_autoattendmod.zip mod_autoattendmod/)
 
