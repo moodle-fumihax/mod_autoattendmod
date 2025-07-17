@@ -13,7 +13,7 @@ $plugin->component = 'mod_autoattendmod';
 $plugin->cron      = 300;
 $plugin->maturity  = MATURITY_STABLE;
 
-$plugin->release   = '2.7.5';
+$plugin->release   = '2.7.6';
 
 $plugin->version   = 2025071400;    // fix autoattendmod_grade_item_update()
 //$plugin->version = 2025020304;    // Match to block version
