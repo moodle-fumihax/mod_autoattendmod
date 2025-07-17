@@ -314,6 +314,8 @@ function autoattendmod_grade_item_update($autoattendmod, $grades=NULL)
 
     //
     $summary = autoattend_get_session_summary($autoattendmod->course);
+    if ($summary==false) return false;
+
     if (empty($summary['maxgrade'])) $summary['maxgrade'] = 0; 
     if (empty($summary['mingrade'])) $summary['mingrade'] = 0; 
 
