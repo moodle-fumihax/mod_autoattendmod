@@ -13,9 +13,10 @@ $plugin->component = 'mod_autoattendmod';
 $plugin->cron      = 300;
 $plugin->maturity  = MATURITY_STABLE;
 
-$plugin->release   = '2.7.6';
+$plugin->release   = '2.7.7';
 
-$plugin->version   = 2025071400;    // fix autoattendmod_grade_item_update()
+$plugin->version   = 2025071401;    // delete autoattend_email2teachers_key()
+//$plugin->version = 2025071400;    // fix autoattendmod_grade_item_update()
 //$plugin->version = 2025020304;    // Match to block version
 //$plugin->version = 2024021101;    // repackage
 //$plugin->version = 2024011102;    // disply attendace info in the block

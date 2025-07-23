@@ -87,7 +87,8 @@ if ($isstudent) {
                         // email key
                         if ($session->prv_state!='O' and $session->state=='O' and $session->method=='S') {
                             if (autoattend_is_email_enable($course->id)) {
-                                autoattend_email2teachers_key($session);
+                                //autoattend_email2teachers_key($session);
+                                autoattend_email_teachers_key($session, $course->id);
                             }
                         }
                         //
