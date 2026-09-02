@@ -7,6 +7,7 @@
 
 ## Moodle Plugins
 - https://moodle.org/plugins/mod_autoattendmod
+- Latest version is for Moodle 5.x
 
 ## Functions
  If you use this module with autoattend block, the following functions are added to autoattend block.
