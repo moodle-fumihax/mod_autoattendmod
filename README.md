@@ -1,7 +1,7 @@
-# mod_autoattendmod
+# mod_autoattendmod v3
 
 ## Overview
- This is additional module to **autoattend block**.  
+ This is main module to **autoattend**.  
  This autoattend module is modification of the Attendance module by Mr. Dmitry Pupinin et. al.  
  **Please install the autoattend block before installing this module.**
 
